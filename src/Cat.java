@@ -34,6 +34,17 @@ public class Cat {
 		// Draw the head
 		g2.setColor(Color.white);
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
+		//add ears
+		g2.setColor(Color.white);
+		int earOneX = x+HEAD_DIMENSION/6;
+		int earTwoX = x+HEAD_DIMENSION*5/6;
+		int earY =y+HEAD_DIMENSION/8;
+		int[] earXPoints = {earOneX+EAR_WIDTH/2,earOneX-EAR_WIDTH/2,earOneX};
+		int[] earYPoints = {earY, earY+EAR_HEIGHT, earY-EAR_HEIGHT};
+		g2.fillPolygon(earXPoints, earYPoints, 3);
+		int[] earTwoXPoints = {earTwoX+EAR_WIDTH/2,earTwoX-EAR_WIDTH/2,earTwoX};
+		int[] earTwoYPoints = {earY+EAR_HEIGHT, earY, earY-EAR_HEIGHT};
+		g2.fillPolygon(earTwoXPoints, earTwoYPoints, 3);
 		// Draw the eyes
 		g2.setColor(Color.black);
 		x = catX + EYE_X; 
@@ -47,17 +58,7 @@ public class Cat {
 		y = catY + MOUTH_Y;
 		g2.fillOval(x, y, MOUTH_WIDTH, MOUTH_HEIGHT);
 		g2.setColor(Color.black);
-		//add ears
-		g2.setColor(Color.white);
-		int earOneX = x-HEAD_DIMENSION/4;
-		int earTwoX = x+(int)(HEAD_DIMENSION/(2.3));
-		int earY = y -HEAD_DIMENSION/2;
-		int[] earXPoints = {earOneX+EAR_WIDTH/2,earOneX-EAR_WIDTH/2,earOneX};
-		int[] earYPoints = {earY, earY+EAR_HEIGHT, earY-EAR_HEIGHT};
-		g2.fillPolygon(earXPoints, earYPoints, 3);
-		int[] earTwoXPoints = {earTwoX+EAR_WIDTH/2,earTwoX-EAR_WIDTH/2,earTwoX};
-		int[] earTwoYPoints = {earY+EAR_HEIGHT, earY, earY-EAR_HEIGHT};
-		g2.fillPolygon(earTwoXPoints, earTwoYPoints, 3);
+		
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
 		g2.drawString("Meowth", catX, catY+HEAD_DIMENSION+10);	
