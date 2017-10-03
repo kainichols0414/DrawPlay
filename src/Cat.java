@@ -14,9 +14,10 @@ public class Cat {
 	private static final int EYE_HEIGHT = 35;
 	private static final int EYE_WIDTH = 10;
 	// pick mouth height, width is based on head dimension
-	private static final int MOUTH_HEIGHT = 10;
-	private static final int MOUTH_WIDTH = HEAD_DIMENSION/4;
+	private static final int MOUTH_HEIGHT = 20;
+	private static final int MOUTH_WIDTH = 40;
 	// mouth starts about 40% from left edge of head
+<<<<<<< HEAD
 	private static final int MOUTH_X = HEAD_DIMENSION/5 * 2;
 	private static final int MOUTH_Y = HEAD_DIMENSION/5 * 3;
 
@@ -24,6 +25,10 @@ public class Cat {
 	private static final int EAR_WIDTH = 20;
 	private static final int EAR_HEIGHT = 20;
 	
+=======
+	private static final int MOUTH_X = HEAD_DIMENSION/10 * 3;
+	private static final int MOUTH_Y = HEAD_DIMENSION/4 * 3;
+>>>>>>> b9e847f00ea11993cae935a3eb746a7a813b5a48
 	
 	// draw will render the Cat on the Graphics object
 	public void draw(Graphics g, int catX, int catY)

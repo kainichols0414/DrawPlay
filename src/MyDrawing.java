@@ -2,6 +2,8 @@ import java.awt.Graphics;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import java.awt.*;
+
 
 
 public class MyDrawing extends JPanel {
@@ -37,6 +39,8 @@ public class MyDrawing extends JPanel {
 		// Set the size (otherwise only title bar displays)
 		frame.setSize(550, 550);
 		
+		//set background color
+		frame.setBackground(Color.black);
 		// Frame will not display until you set visible true
 		frame.setVisible(true);
 	}
